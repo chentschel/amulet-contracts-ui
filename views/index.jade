@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .container
+
+    h1= title
+
+    .row
+      .col-6
+        .escrowed-kitties
+        div(class="my-5")
+          h4.lead Escrowed Kitties
+          div(class="escrowed-len mb-3")
+          ul(class="k-list list-unstyled pre-scrollable")
+
+        .kitties-actions
+          label(for="kitty-id") KittyId
+          input(class="form-control", name="kitty-id")
+          button#deposit(class="btn btn-block btn-primary my-2") Deposit
+          button#withdraw(class="btn btn-block btn-secondary my-2") Withdraw
+          button#forge(class="btn btn-block btn-success my-2") Forge
+    
+      .col-6
+        .forged-amulets
+        div(class="my-5")
+          h4.lead Forged Amulets
+          ul(class="a-list list-unstyled pre-scrollable")
+        
+        .amulet-actions
+          label(for="amulet-id") AmuletId
+          input(class="form-control", name="amulet-id")        
+          button#unforge(class="btn btn-block btn-danger my-2") Unforge
+  
